@@ -25,7 +25,11 @@ export default function Header({ fetchData, inputRef, setError, setLocation }) {
         <div className="header_inner">
           <p className="header_text">Weather</p>
           <div className="header_box">
-            <form action="#" className="header_form">
+            <form
+              action="#"
+              onSubmit={(e) => e.preventDefault()}
+              className="header_form"
+            >
               <input
                 type="search"
                 ref={inputRef}
