@@ -165,3 +165,11 @@
   .header_btn {
   }
 }
+@media only screen and (max-width: 525px) {
+  .header_box {
+    margin-left: 0;
+  }
+  .header_text {
+    margin-left: 0;
+  }
+}

@@ -45,7 +45,6 @@
 /* Medium devices (tablets, 768px and down) */
 @media only screen and (max-width: 768px) {
   .main_list {
-    width: 100%;
     gap: 15px;
   }
   .main_item {
@@ -69,5 +68,17 @@
   .main_list {
     max-width: 400px;
     /* margin-left: 16px; */
+  }
+}
+@media only screen and (max-width: 525px) {
+  .main_list {
+    width: 460px;
+    margin-left: 30px;
+  }
+  .main_box-2 {
+    justify-content: space-between;
+  }
+  .main_item {
+    width: 220px;
   }
 }

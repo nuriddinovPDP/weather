@@ -62,6 +62,7 @@
 @media only screen and (max-width: 480px) {
   .at {
     margin-right: 50px;
+    position: static;
   }
   .at_list {
     width: 390px;
@@ -79,5 +80,12 @@
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 525px) {
+  .at {
+  }
+  .at_list {
+    width: 400px;
   }
 }
