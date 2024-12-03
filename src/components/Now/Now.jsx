@@ -4,6 +4,7 @@ import { CiCalendar } from "react-icons/ci";
 import { RiMapPinLine } from "react-icons/ri";
 
 export default function Now({ data }) {
+  console.log(data);
   let weekDays = [
     "Monday",
     "Tuesday",

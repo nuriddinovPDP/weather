@@ -3,7 +3,7 @@ import { CiSearch } from "react-icons/ci";
 import { BiTargetLock } from "react-icons/bi";
 
 export default function Header({ fetchData, inputRef, setError, setLocation }) {
-  const handleCurrentLocation = () => {
+  const handleCurrentLocation = (evt) => {
     navigator.geolocation.getCurrentPosition(
       (position) => {
         const { longitude, latitude } = position.coords;
