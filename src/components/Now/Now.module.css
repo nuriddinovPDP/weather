@@ -1,0 +1,81 @@
+.box {
+  background-color: var(--bg-color);
+  max-width: 300px;
+  display: flex;
+  padding-top: 15px;
+  border-radius: 15px;
+  padding-bottom: 25px;
+  margin-left: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  flex-direction: column;
+}
+.span {
+  font-family: sans-serif;
+  color: #fff;
+}
+
+.main {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+.mini_box {
+  display: flex;
+  align-items: center;
+  gap: 65px;
+}
+.strong {
+  font-family: sans-serif;
+  color: #fff;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.icon {
+  width: 80px;
+  color: #3f4042;
+  height: 80px;
+}
+.day {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  gap: 3px;
+  margin-bottom: 15px;
+  font-family: sans-serif;
+}
+
+.loacation {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-family: sans-serif;
+  gap: 3px;
+}
+.calendar {
+  width: 18.4px;
+  height: 18.4px;
+}
+@media only screen and (max-width: 768px) {
+  .box {
+    margin-left: 10px;
+  }
+}
+@media only screen and (max-width: 468px) {
+  .box {
+    max-width: 400px;
+    margin-left: 16px;
+  }
+  .mini_box {
+    gap: 150px;
+  }
+}
+@media only screen and (max-width: 928px) {
+  .box {
+    max-width: 250px;
+  }
+  .mini_box {
+    gap: 30px;
+  }
+}
