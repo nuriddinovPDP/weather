@@ -4,7 +4,6 @@ import { CiCalendar } from "react-icons/ci";
 import { RiMapPinLine } from "react-icons/ri";
 
 export default function Now({ data }) {
-  console.log(data);
   let weekDays = [
     "Monday",
     "Tuesday",
@@ -38,7 +37,6 @@ export default function Now({ data }) {
     months: months[new Date(data?.dt * 1000).getMonth() - 1],
     year: new Date(data?.dt * 1000).getFullYear(),
   };
-  console.log(new Date(data?.dt * 1000).getDay());
   return (
     <div className={styles.box}>
       <span className={styles.span}>Now</span>

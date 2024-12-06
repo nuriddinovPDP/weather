@@ -1,5 +1,5 @@
 .header {
-  background-color: #212528;
+  background-color: var(--bg-color-main);
   padding-top: 15px;
   padding-bottom: 15px;
   /* position: fixed; */
@@ -11,7 +11,7 @@
 .header_text {
   font-family: sans-serif;
   font-size: 26px;
-  color: #fff;
+  color: var(--main-color);
   margin-left: 20px;
 }
 .header_inner {
@@ -39,6 +39,7 @@
 .header_input::placeholder {
   font-family: sans-serif;
   color: #57585a;
+  background-color: var(--bg-color);
 }
 
 .header_btn {
@@ -172,4 +173,51 @@
   .header_text {
     margin-left: 0;
   }
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.mode-label {
+  width: 70px;
+  height: 30px;
+  border-radius: 50px;
+  display: block;
+  background-color: var(--bg-color);
+  padding: 3px;
+  margin-bottom: 20px;
+  position: absolute;
+  left: 740px;
+  top: 20px;
+}
+.mode-span {
+  width: 25px;
+  height: 25px;
+  display: block;
+  margin-left: 2px;
+  transition: 0.5s;
+  background-image: url(/src/assets/sun.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+}
+.mode:checked + .mode-label > span {
+  transform: translateX(38px);
+  transition: 0.5s;
+  background-image: url(/src/assets/half-moon.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mode:checked + .mode-label {
+  background-color: #ffffff;
 }

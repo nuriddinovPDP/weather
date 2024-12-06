@@ -9,14 +9,15 @@
   padding-left: 15px;
   padding-right: 15px;
   flex-direction: column;
+  color: var(--main-color);
 }
 .span {
   font-family: sans-serif;
-  color: #fff;
+  color: var(--main-color);
 }
 
 .main {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid var(--main-color);
   padding-bottom: 10px;
   margin-bottom: 15px;
 }
@@ -27,7 +28,7 @@
 }
 .strong {
   font-family: sans-serif;
-  color: #fff;
+  color: var(--main-color);
   font-size: 36px;
   font-weight: 500;
 }
@@ -40,7 +41,7 @@
 .day {
   display: flex;
   align-items: center;
-  color: #fff;
+  color: var(--main-color);
   gap: 3px;
   margin-bottom: 15px;
   font-family: sans-serif;
@@ -49,7 +50,7 @@
 .loacation {
   display: flex;
   align-items: center;
-  color: #fff;
+  color: var(--main-color);
   font-family: sans-serif;
   gap: 3px;
 }

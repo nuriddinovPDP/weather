@@ -9,10 +9,13 @@
   margin: 0 auto;
 }
 
-:root {
+.dark {
   --bg-color: #282c2d;
+  --bg-color-main: #212528;
+  --main-color: #fff;
 }
-body {
-  background-color: #212528;
-  overflow-x: hidden;
+.light {
+  --bg-color: #6ac5dc;
+  --bg-color-main: #e2e2e2;
+  --main-color: #000;
 }

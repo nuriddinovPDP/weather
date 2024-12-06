@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import "./App.css";
 import Air from "./components/Air/Air";
 import Forecast from "./components/Forecast/Forecast";
@@ -9,6 +9,7 @@ import Now from "./components/Now/Now";
 import Sun from "./components/Sun/Sun";
 import TodayAt from "./components/TodayAt/TodayAt";
 import axios from "axios";
+import { ThemeContext } from "./components/context/ThemeContext";
 
 function App() {
   const [data, setData] = useState(null);
@@ -66,13 +67,12 @@ function App() {
       `/air_pollution?lat=${data?.coord.lat}&lon=${data?.coord.lon}&appid=${API_KEY}`
     ).then((res) => setAir(res.data));
   }, [data]);
-  // console.log(data);
-  // console.log(forecast);
-  console.log(data);
 
   error && alert(error);
+
+  const { isDark } = useContext(ThemeContext);
   return (
-    <>
+    <div className={`${isDark ? "dark" : "light"}`}>
       <Header
         setError={setError}
         setLocation={setLocation}
@@ -95,7 +95,7 @@ function App() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

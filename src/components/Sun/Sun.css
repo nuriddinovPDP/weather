@@ -39,11 +39,11 @@
 .sun-icon {
   width: 40.4px;
   height: 40.4px;
-  color: #fff;
+  color: var(--main-color);
 }
 
 .item_text {
-  color: #fff;
+  color: var(--main-color);
   font-family: sans-serif;
   font-size: 33px;
 }

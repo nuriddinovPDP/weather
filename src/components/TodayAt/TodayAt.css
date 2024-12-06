@@ -5,7 +5,7 @@
 
 .at_title {
   font-family: sans-serif;
-  color: #fff;
+  color: var(--main-color);
   font-size: 30px;
 }
 
@@ -35,18 +35,18 @@
 .at_span {
   font-family: sans-serif;
 
-  color: #fff;
+  color: var(--main-color);
 }
 
 .at_text {
   font-family: sans-serif;
 
-  color: #fff;
+  color: var(--main-color);
 }
 .at_icon {
   width: 45px;
   height: 45px;
-  color: #fff;
+  /* color: var(--main-color); */
 }
 
 @media only screen and (max-width: 768px) {

@@ -9,6 +9,7 @@
   padding-right: 15px;
   flex-direction: column;
   max-width: 300px;
+  color: var(--main-color);
 }
 
 .forecast_list {
@@ -29,7 +30,7 @@
   height: 40.8px;
 }
 .forecast_temp {
-  color: #fff;
+  color: var(--main-color);
   font-family: sans-serif;
   margin-left: 5px;
   margin-right: 10px;
@@ -37,19 +38,19 @@
 }
 
 .forecast_date {
-  color: #fff;
+  color: var(--main-color);
   font-family: sans-serif;
   margin-right: 10px;
   font-size: 13px;
 }
 
 .forecast_day {
-  color: #fff;
+  color: var(--main-color);
   font-family: sans-serif;
   font-size: 1px;
 }
 .forecast_title {
-  color: #fff;
+  color: var(--main-color);
   font-family: sans-serif;
   font-size: 18px;
   font-weight: 400;

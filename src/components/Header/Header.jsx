@@ -1,6 +1,8 @@
 import "./Header.css";
 import { CiSearch } from "react-icons/ci";
 import { BiTargetLock } from "react-icons/bi";
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 
 export default function Header({ fetchData, inputRef, setError, setLocation }) {
   const handleCurrentLocation = (evt) => {
@@ -19,12 +21,28 @@ export default function Header({ fetchData, inputRef, setError, setLocation }) {
     );
   };
 
+  const { isDark, setIsDark } = useContext(ThemeContext);
+
+  const handleClick = () => {
+    localStorage.setItem("mode", isDark);
+    setIsDark((p) => !p);
+  };
   return (
     <header className="header">
       <div className="container">
         <div className="header_inner">
           <p className="header_text">Weather</p>
           <div className="header_box">
+            <input
+              type="checkbox"
+              className="mode visually-hidden"
+              id="mode"
+              onChange={handleClick}
+            />
+            <label className="mode-label" htmlFor="mode">
+              <span className="mode-span"></span>
+            </label>
+
             <form
               action="#"
               onSubmit={(e) => e.preventDefault()}
