@@ -56,6 +56,18 @@
   font-weight: 400;
   font-size: 28px;
 }
+@media only screen and (min-width: 1024px) {
+  .forecast_temp {
+    font-size: 1px;
+  }
+  .forecast_day {
+    font-size: 16px;
+  }
+  .forecast_date {
+    font-size: 16px;
+  }
+}
+
 @media only screen and (max-width: 928px) {
   .forecast {
     max-width: 290px;
@@ -67,17 +79,6 @@
     font-size: 16px;
   }
   .forecast_temp {
-    font-size: 16px;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .forecast_temp {
-    font-size: 16px;
-  }
-  .forecast_day {
-    font-size: 16px;
-  }
-  .forecast_date {
     font-size: 16px;
   }
 }
@@ -112,11 +113,11 @@
 }
 
 .forecast_date {
-  font-size: 22px;
+  font-size: 17px;
 }
 .forecast_day {
-  font-size: 22px;
+  font-size: 17px;
 }
 .forecast_temp {
-  font-size: 22px;
+  font-size: 18px;
 }

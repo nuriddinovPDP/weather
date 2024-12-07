@@ -1,19 +1,27 @@
+import { useContext } from "react";
 import AirItem from "../AirItem/AirItem";
 import "./Air.css";
 import { FaWind } from "react-icons/fa6";
+import { LangContext } from "../context/LangContext";
+import { language } from "../lang/lang";
 
 export default function Air({ air }) {
   let airQuality = ["Good", "Fair", "Moderate", "Poor", "Very Poor"];
+  const { lang } = useContext(LangContext);
   return (
     <div className="air">
       <div className="air_top">
-        <span className="air_top-span">Air Quality Index</span>
+        <span className="air_top-span">{language[lang].sidebar.air}</span>
         <button
           className={`air_top-btn ${airQuality[air?.list?.[0]?.main?.aqi - 1]
             ?.slice(0, 4)
             .toLowerCase()}`}
         >
-          {airQuality[air?.list?.[0]?.main?.aqi - 1]}
+          {
+            language[lang].sidebar?.airQuality2[
+              airQuality[air?.list?.[0]?.main?.aqi - 1]
+            ]
+          }
         </button>
       </div>
       <div className="air_bottom">

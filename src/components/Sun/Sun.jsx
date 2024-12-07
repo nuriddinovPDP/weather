@@ -1,5 +1,8 @@
+import { useContext } from "react";
 import "./Sun.css";
 import { FiSunrise, FiSunset } from "react-icons/fi";
+import { LangContext } from "../context/LangContext";
+import { language } from "../lang/lang";
 
 export default function Sun({ data }) {
   const sunriseHour = new Date(data?.sys.sunrise * 1000).getHours();
@@ -16,21 +19,23 @@ export default function Sun({ data }) {
   const hourTextSunrise =
     realHourSunrise + ":" + sunriseMinute + " " + ampmsunrise;
   const hourTextSunset = realHourSunset + ":" + sunsetMinute + " " + ampmsunset;
-
+  const { lang } = useContext(LangContext);
   return (
     <div className="sun">
-      <span className="sun_span">Sunrise & Sunset</span>
+      <span className="sun_span">
+        {language[lang].sidebar.sunrise} & {language[lang].sidebar.sunset}
+      </span>
 
       <ul className="sun_list">
         <li className="sun_item">
-          <span className="item_span">Sunrise</span>
+          <span className="item_span"> {language[lang].sidebar.sunrise}</span>
           <div className="item_main">
             <FiSunrise className="sun-icon" />
             <p className="item_text">{hourTextSunrise}</p>
           </div>
         </li>
         <li className="sun_item">
-          <span className="item_span">Sunset</span>
+          <span className="item_span">{language[lang].sidebar.sunset}</span>
           <div className="item_main">
             <FiSunset className="sun-icon" />
             <p className="item_text">{hourTextSunset}</p>

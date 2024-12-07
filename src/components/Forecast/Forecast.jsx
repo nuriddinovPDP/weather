@@ -1,9 +1,14 @@
+import { useContext } from "react";
 import ForecastItem from "../ForecastItem/Forecast.Item";
+import { LangContext } from "../context/LangContext";
+import { language } from "../lang/lang";
 import "./Forecast.css";
 export default function Forecast({ forecast }) {
+  const { lang } = useContext(LangContext);
+
   return (
     <div className="forecast">
-      <h2 className="forecast_title">5 Days Forecast</h2>
+      <h2 className="forecast_title">{language[lang].sidebar.forecast}</h2>
       <ul className="forecast_list">
         <ForecastItem data={forecast?.list[4]} />
         <ForecastItem data={forecast?.list[12]} />

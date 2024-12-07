@@ -1,5 +1,10 @@
+import { useContext } from "react";
+import { LangContext } from "../context/LangContext";
 import "./ForecastItem.css";
+import { language } from "../lang/lang";
 export default function ForecastItem({ data }) {
+  const { lang } = useContext(LangContext);
+
   let weekDays = [
     "Monday",
     "Tuesday",
@@ -10,18 +15,18 @@ export default function ForecastItem({ data }) {
     "Sunday",
   ];
   let months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
+    "January",
+    "February",
+    "March",
+    "April",
     "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
 
   const currentData = {
@@ -44,9 +49,13 @@ export default function ForecastItem({ data }) {
       />
       <p className="forecast_temp">{data?.main.temp}°C</p>
       <p className="forecast_date">
-        {currentData.date} {currentData.months}
+        {language?.[lang]?.sidebar?.months?.[currentData.months]?.slice(0, 3)},
+        {currentData.date}
+      </p>{" "}
+      <p className="forecast_day">
+        {" "}
+        {language?.[lang]?.sidebar?.weekDays[currentData.day]},
       </p>
-      <p className="forecast_day">{currentData.day}</p>
     </li>
   );
 }

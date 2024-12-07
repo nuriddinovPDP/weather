@@ -10,6 +10,8 @@ import Sun from "./components/Sun/Sun";
 import TodayAt from "./components/TodayAt/TodayAt";
 import axios from "axios";
 import { ThemeContext } from "./components/context/ThemeContext";
+import { LangContext } from "./components/context/LangContext";
+import { language } from "./components/lang/lang";
 
 function App() {
   const [data, setData] = useState(null);
@@ -71,8 +73,9 @@ function App() {
   error && alert(error);
 
   const { isDark } = useContext(ThemeContext);
+  const { lang } = useContext(LangContext);
   return (
-    <div className={`${isDark ? "dark" : "light"}`}>
+    <div className={`${!isDark ? "dark" : "light"}`}>
       <Header
         setError={setError}
         setLocation={setLocation}
@@ -84,7 +87,7 @@ function App() {
           <div className="main_inner">
             <Left data={data} forecast={forecast} />
             <div className="main_box">
-              <h4 className="app_title">Today's Highlights</h4>
+              <h4 className="app_title">{language[lang].sidebar.today}</h4>
               <div className="box">
                 <Air air={air} />
                 <Sun data={data} />
